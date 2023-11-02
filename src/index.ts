@@ -1,4 +1,4 @@
-import { format, about, updata } from "./deps.ts";
+import { about, updata } from "./deps.ts";
 
 const commands: { [key: string]: () => void } = {
   about: about,
