@@ -1,6 +1,6 @@
-import { format, about,updata } from "./deps.ts";
+import { format, about, updata } from "./deps.ts";
 
-const commands = {
+const commands: { [key: string]: () => void } = {
   about: about,
   updata: updata
 };
@@ -8,7 +8,7 @@ const commands = {
 console.log("press ctrl + c, will exit");
 while (true) {
   const commandName = prompt(">");
-  if (commandName === "exit") {
+  if (commandName === null || commandName === "exit") {
     break;
   }
   const command = commands[commandName];
