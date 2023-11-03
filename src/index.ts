@@ -18,15 +18,15 @@ while (true) {
     console.log(mes[lang].Nocommandentered);
     continue;
   }
-  const inputArray = input.split(" ");
-  const commandName: string = inputArray[0];
-  const commandArgs = inputArray.slice(1);
-  // const commandName = commands[input];
+  // const inputArray = input.split(" ");
+  // const commandName: string = inputArray[0];
+  // const commandArgs = inputArray.slice(1);
+  const commandName = commands[input];
   if (input === undefined) {
     console.log(mes[lang].commandNotFound);
     continue;
   } else {
-    commandName(lang, commandArgs);
+    commandName(lang);
   }
 }
 // // console.log(confirm("message"))Yes or No
