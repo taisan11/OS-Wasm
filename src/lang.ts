@@ -1,12 +1,13 @@
 // messages.ts
-export const mes = {
-    en: {
-      exitMessage: "press exit, will exit",
-      commandNotFound: "command not found",
-    },
-    ja: {
-      exitMessage: "exitを押すと終了します",
-      commandNotFound: "コマンドが見つかりません",
-    },
-    // 他の言語のメッセージもここに追加できます
+export const mes:{[key: string]} = {
+  en: {
+    exitMessage: "press exit, will exit",
+    commandNotFound: "command not found",
+    Nocommandentered: "No command entered",
+  },
+  ja: {
+    exitMessage: "exitを押すと終了します",
+    commandNotFound: "コマンドが見つかりません",
+    Nocommandentered: "コマンド入力しろや",
+  },
 };

@@ -1,15 +1,21 @@
-import { about, updata, mes } from "./deps.ts";
+import { about, mes, updata, readSetting } from "./deps.ts";
 
 const commands: { [key: string]: () => void } = {
   about: about,
   updata: updata,
 };
-const lang = "en";
+const setting = await readSetting();
+console.log(setting);
+const lang = setting.lang;
 console.log(mes[lang].exitMessage);
 while (true) {
   const commandName = prompt(">");
-  if (commandName === null || commandName === "exit") {
+  if (commandName === "exit") {
     break;
+  }
+  if (commandName === null) {
+    console.log(mes[lang].Nocommandentered);
+    continue;
   }
   const command = commands[commandName];
   if (command === undefined) {
