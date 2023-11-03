@@ -1,11 +1,11 @@
-import { about, updata } from "./deps.ts";
+import { about, updata, mes } from "./deps.ts";
 
 const commands: { [key: string]: () => void } = {
   about: about,
-  updata: updata
+  updata: updata,
 };
-
-console.log("press ctrl + c, will exit");
+const lang = "en";
+console.log(mes[lang].exitMessage);
 while (true) {
   const commandName = prompt(">");
   if (commandName === null || commandName === "exit") {
@@ -13,7 +13,7 @@ while (true) {
   }
   const command = commands[commandName];
   if (command === undefined) {
-    console.log("command not found");
+    console.log(mes[lang].commandNotFound);
     continue;
   } else {
     command();
