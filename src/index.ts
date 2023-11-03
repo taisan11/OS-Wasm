@@ -1,6 +1,6 @@
 import { about, mes, readSetting, updata, help } from "./deps.ts";
 
-const commands: { [key: string]: () => void } = {
+const commands: { [key: string]: (lang: string) => void } = {
   about: about,
   updata: updata,
   help: help,
