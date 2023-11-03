@@ -6,16 +6,20 @@ console.log(code);
 
 Deno.writeTextFile("./build/js/index.js", code);
 
-import * as esbuild from 'https://deno.land/x/esbuild@v0.19.4/wasm.js';
+import * as esbuild from "https://deno.land/x/esbuild@v0.19.4/wasm.js";
 
-const codea = await Deno.readTextFile('./build/js/index.js');
+const codea = await Deno.readTextFile("./build/js/index.js");
 
-const result = await esbuild.transform(codea, { minify: true, format: 'iife', charset: 'utf8' });
+const result = await esbuild.transform(codea, {
+  minify: true,
+  format: "iife",
+  charset: "utf8",
+});
 
 for (const warning of result.warnings) {
-	console.warn(warning);
+  console.warn(warning);
 }
 
-await Deno.writeTextFile('./build/index.min.js', result.code);
+await Deno.writeTextFile("./build/index.min.js", result.code);
 
 esbuild.stop();
