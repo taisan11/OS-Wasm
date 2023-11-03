@@ -1,7 +1,7 @@
 // messages.ts
 export const mes: { [key: string]: any } = {
   en: {
-    exitMessage: "press exit, will exit",
+    exitMessage: "Enter 'exit' to quit.",
     commandNotFound: "command not found",
     Nocommandentered: "No command entered",
     // helpコマンド用
@@ -10,7 +10,7 @@ export const mes: { [key: string]: any } = {
     helphelp: "View help",
   },
   ja: {
-    exitMessage: "exitを押すと終了します",
+    exitMessage: "exitと入力すると終了します",
     commandNotFound: "コマンドが見つかりません",
     Nocommandentered: "コマンド入力しろや",
     // helpコマンド用
