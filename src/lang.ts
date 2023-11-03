@@ -1,5 +1,5 @@
 // messages.ts
-export const mes:{[key: string]} = {
+export const mes:{[key: string]: any} = {
   en: {
     exitMessage: "press exit, will exit",
     commandNotFound: "command not found",

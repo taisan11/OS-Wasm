@@ -19,6 +19,6 @@ export async function readSetting(): Promise<Setting> {
   return Setting as Setting;
 }
 
-export async function writeSetting(setting: Setting): Promise<void> {
-  await Deno.writeFile(settingPath, setting);
-}
+// export async function writeSetting(setting: Setting): Promise<void> {
+//   await Deno.writeFile(settingPath, setting);
+// }
