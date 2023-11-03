@@ -1,8 +1,9 @@
-import { about, mes, updata, readSetting } from "./deps.ts";
+import { about, mes, readSetting, updata, help } from "./deps.ts";
 
 const commands: { [key: string]: () => void } = {
   about: about,
   updata: updata,
+  help: help,
 };
 const setting = await readSetting();
 console.log(setting);
@@ -22,7 +23,7 @@ while (true) {
     console.log(mes[lang].commandNotFound);
     continue;
   } else {
-    command();
+    command(lang);
   }
 }
 // // console.log(confirm("message"))Yes or No

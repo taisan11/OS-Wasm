@@ -1,6 +1,6 @@
 import { blue } from "../deps.ts";
 
-function updata() {
+function updata(lang: string) {
   const updataTF = confirm("Do you want to update");
   if (updataTF === true) {
     console.log("updata");

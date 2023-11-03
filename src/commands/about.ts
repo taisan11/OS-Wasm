@@ -1,6 +1,6 @@
 import { blue } from "../deps.ts";
 
-function about() {
+function about(lang: string) {
   console.log(
     `OS-Wasm ${blue("v0.0.1β")}\nBaseSystem: ${blue(Deno.build.os)}\nDeno: ${
       blue(Deno.version.deno)
