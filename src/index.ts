@@ -10,23 +10,23 @@ console.log(setting);
 const lang = setting.lang;
 console.log(mes[lang].exitMessage);
 while (true) {
-  const input = prompt(">");
-  if (input === "exit") {
+  const commandName = prompt(">");
+  if (commandName === "exit") {
     break;
   }
-  if (input === null) {
+  if (commandName === null) {
     console.log(mes[lang].Nocommandentered);
     continue;
   }
   // const inputArray = input.split(" ");
   // const commandName: string = inputArray[0];
   // const commandArgs = inputArray.slice(1);
-  const commandName = commands[input];
-  if (input === undefined) {
+  const command = commands[commandName];
+  if (command === undefined) {
     console.log(mes[lang].commandNotFound);
     continue;
   } else {
-    commandName(lang);
+    command(lang);
   }
 }
 // // console.log(confirm("message"))Yes or No
