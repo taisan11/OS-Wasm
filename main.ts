@@ -6,9 +6,16 @@ console.log(code);
 
 Deno.writeTextFile("./build/js/index.js", code);
 
-import { GzipStream } from "https://deno.land/x/compress@v0.4.5/gzip/mod.ts";
-const gzip = new GzipStream();
-gzip.on("progress", (progress: string) => {
-  console.log(progress); // 0.00% => 100.00%
-});
-await gzip.compress("./build/js/index.js", "./build/js/index.gz.js");
+import * as esbuild from 'https://deno.land/x/esbuild@v0.19.4/wasm.js';
+
+const codea = await Deno.readTextFile('./build/js/index.js');
+
+const result = await esbuild.transform(codea, { minify: true, format: 'iife', charset: 'utf8' });
+
+for (const warning of result.warnings) {
+	console.warn(warning);
+}
+
+await Deno.writeTextFile('./build/index.min.js', result.code);
+
+esbuild.stop();
