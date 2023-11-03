@@ -16,6 +16,6 @@ export const mes: { [key: string]: any } = {
     // helpコマンド用
     abouthelp: "wasmOSの詳細を表示!!",
     updatahelp: "アプデする(まだできてない)",
-    helphelp: "helpを表示(This)",
+    helphelp: "helpを表示(このコマンド)",
   },
 };
