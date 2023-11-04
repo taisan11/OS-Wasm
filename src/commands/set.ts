@@ -1,6 +1,6 @@
 import { blue, mes } from "../deps.ts";
 
-function set(lang: string, subc ) {
+function set(lang: string ) {
     console.log(subc[0], subc[1])
 }
 
