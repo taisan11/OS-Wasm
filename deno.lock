@@ -1,7 +1,8 @@
 {
   "version": "3",
   "redirects": {
-    "https://deno.land/std/fs/mod.ts": "https://deno.land/std@0.205.0/fs/mod.ts"
+    "https://deno.land/std/fs/mod.ts": "https://deno.land/std@0.205.0/fs/mod.ts",
+    "https://deno.land/x/wasm/wasi.ts": "https://deno.land/x/wasm@v1.2.2/wasi.ts"
   },
   "remote": {
     "https://deno.land/std@0.205.0/assert/assert.ts": "9a97dad6d98c238938e7540736b826440ad8c1c1e54430ca4c4e623e585607ee",
@@ -89,6 +90,8 @@
     "https://deno.land/std@0.205.0/path/windows/resolve.ts": "5ff441ab18a2346abadf778121128ee71bda4d0898513d4639a6ca04edca366b",
     "https://deno.land/std@0.205.0/path/windows/separator.ts": "ae21f27015f10510ed1ac4a0ba9c4c9c967cbdd9d9e776a3e4967553c397bd5d",
     "https://deno.land/std@0.205.0/path/windows/to_file_url.ts": "8e9ea9e1ff364aa06fa72999204229952d0a279dbb876b7b838b2b2fea55cce3",
-    "https://deno.land/std@0.205.0/path/windows/to_namespaced_path.ts": "e0f4d4a5e77f28a5708c1a33ff24360f35637ba6d8f103d19661255ef7bfd50d"
+    "https://deno.land/std@0.205.0/path/windows/to_namespaced_path.ts": "e0f4d4a5e77f28a5708c1a33ff24360f35637ba6d8f103d19661255ef7bfd50d",
+    "https://deno.land/x/wasm@v1.2.2/pkg/wasmer_wasi_js.js": "33c58765ded371211b754157955a7ab1d2de921a9c8fee8748112d25605726dd",
+    "https://deno.land/x/wasm@v1.2.2/wasi.ts": "4fde34f8fa8c52af06adcc241f1b18fabf2df0d8b1f1b62d05e70377688a8fcb"
   }
 }

@@ -3,6 +3,7 @@
     "dev": "deno run -A --unstable src/index.ts",
     "build": "deno compile -A src/index.ts --output ./build/wasmos.exe",
     "build:lite": "deno compile -A src/index.ts --lite --output ./build/wasmos.lite.exe",
-    "build:js": "deno run -A main.ts"
+    "build:js": "deno run -A main.ts",
+    "wasm": "deno run -A --unstable src/commands/run.ts"
   }
 }

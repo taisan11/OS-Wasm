@@ -1,5 +1,12 @@
 import {
-  about,clear,dig,help,mes,readSetting,set,updata,
+  about,
+  clear,
+  dig,
+  help,
+  mes,
+  readSetting,
+  set,
+  updata,
 } from "./deps.ts";
 
 const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
