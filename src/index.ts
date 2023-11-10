@@ -1,6 +1,6 @@
 import { about, help, mes, readSetting, updata } from "./deps.ts";
 
-const commands: { [key: string]: (lang: string) => void } = {
+const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
   about: about,
   updata: updata,
   help: help,
@@ -18,15 +18,14 @@ while (true) {
     console.log(mes[lang].Nocommandentered);
     continue;
   }
-  // const inputArray = input.split(" ");
-  // const commandName: string = inputArray[0];
-  // const commandArgs = inputArray.slice(1);
-  const command = commands[commandName];
+  const subci = commandName.split(" ");
+  // const subc = subci.shift();
+  const command = commands[subci[0]];
   if (command === undefined) {
     console.log(mes[lang].commandNotFound);
     continue;
   } else {
-    command(lang);
+    command(lang, subci);
   }
 }
 // // console.log(confirm("message"))Yes or No

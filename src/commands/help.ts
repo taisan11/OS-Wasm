@@ -1,10 +1,15 @@
 import { blue, mes } from "../deps.ts";
 
-function help(lang: string) {
+function help(lang: string, subc: string[]) {
+  if (subc[1] === undefined) {
+    subc.splice(1, 1, "1");
+  }
   console.log(
-    `all command help\n\n${blue("about")}:  ${mes[lang].abouthelp}\n\n${
-      blue("updata")
-    }: ${mes[lang].updatahelp}\n\n${blue("help")}: ${mes[lang].helphelp}`,
+    `${mes[lang].page[subc[1]]}\nall command help\n\n${blue("about")}:  ${
+      mes[lang].abouthelp
+    }\n\n${blue("updata")}: ${mes[lang].updatahelp}\n\n${blue("help")}: ${
+      mes[lang].helphelp
+    }`,
   );
 }
 
