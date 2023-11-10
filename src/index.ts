@@ -1,9 +1,14 @@
-import { about, help, mes, readSetting, updata } from "./deps.ts";
+import {
+  about,clear,dig,help,mes,readSetting,set,updata,
+} from "./deps.ts";
 
 const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
   about: about,
   updata: updata,
   help: help,
+  set: set,
+  clear: clear,
+  dig: dig,
 };
 const setting = await readSetting();
 console.log(setting);

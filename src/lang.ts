@@ -5,6 +5,7 @@ export const mes: { [key: string]: any } = {
     exitMessage: "Enter 'exit' to quit.",
     commandNotFound: "command not found",
     Nocommandentered: "No command entered",
+    Nosubcentered: "No subcommand entered",
     // helpコマンド用
     page: {
       1: `Page 1`,
@@ -18,6 +19,7 @@ export const mes: { [key: string]: any } = {
     exitMessage: "exitと入力すると終了します",
     commandNotFound: "コマンドが見つかりません",
     Nocommandentered: "コマンド入力しろや",
+    Nosubcentered: "サブコマンドがないのでhelpを見ろ",
     // helpコマンド用
     page: {
       1: `1ページ目`,

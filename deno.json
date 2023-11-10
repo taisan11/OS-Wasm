@@ -1,7 +1,8 @@
 {
   "tasks": {
-    "dev": "deno run -A src/index.ts",
+    "dev": "deno run -A --unstable src/index.ts",
     "build": "deno compile -A src/index.ts --output ./build/wasmos.exe",
+    "build:lite": "deno compile -A src/index.ts --lite --output ./build/wasmos.lite.exe",
     "build:js": "deno run -A main.ts"
   }
 }
