@@ -1,6 +1,6 @@
+// deno-lint-ignore-file no-await-in-sync-fn
 import { init, WASI } from "https://deno.land/x/wasm/wasi.ts";
-
-// This is needed to load the WASI library first
+function run() {
 await init();
 
 const wasi = new WASI({
@@ -18,3 +18,5 @@ const exitCode = wasi.start();
 const stdout = wasi.getStdoutString();
 // This should print "hello world (exit code: 0)"
 console.log(`${stdout}(exit code: ${exitCode})`);
+}
+export { run };

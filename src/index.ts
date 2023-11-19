@@ -7,6 +7,7 @@ import {
   readSetting,
   set,
   updata,
+  run,
 } from "./deps.ts";
 
 const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
@@ -16,6 +17,7 @@ const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
   set: set,
   clear: clear,
   dig: dig,
+  run: run,
 };
 const setting = await readSetting();
 console.log(setting);
