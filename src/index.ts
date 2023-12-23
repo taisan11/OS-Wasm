@@ -5,9 +5,9 @@ import {
   help,
   mes,
   readSetting,
+  run,
   set,
   updata,
-  run,
 } from "./deps.ts";
 
 const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
