@@ -1,4 +1,4 @@
-import { ensureDir, exists } from "https://deno.land/std/fs/mod.ts";
+import { ensureDir, exists } from "@std/fs";
 
 interface Setting {
   lang: string;

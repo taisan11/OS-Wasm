@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-await-in-sync-fn
-import { init, WASI } from "https://deno.land/x/wasm/wasi.ts";
+import { init, WASI } from "https://deno.land/x/wasm@v1.2.2/wasi.ts";
 async function run() {
   await init();
 

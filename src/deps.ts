@@ -3,8 +3,8 @@ export {
   bold,
   italic,
   red,
-} from "https://deno.land/std@0.205.0/fmt/colors.ts";
-export { format } from "https://deno.land/std@0.205.0/fmt/bytes.ts";
+} from "@std/fmt/colors";
+export { format } from "@std/fmt/bytes";
 export { about } from "./commands/about.ts";
 export { updata } from "./commands/updata.ts";
 export { help } from "./commands/help.ts";
