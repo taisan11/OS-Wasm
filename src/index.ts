@@ -1,14 +1,12 @@
-import {
-  about,
-  clear,
-  dig,
-  help,
-  mes,
-  readSetting,
-  run,
-  set,
-  updata,
-} from "./deps.ts";
+import {about} from "./commands/about.ts"
+import {clear} from "./commands/clear.ts";
+import { dig } from "./commands/dig.ts";
+import { help } from "./commands/help.ts";
+import { mes } from "./lang.ts";
+import { readSetting } from "./setting.ts";
+import { run } from "./commands/run.ts";
+import { set } from "./commands/set.ts";
+import { updata } from "./commands/updata.ts";
 
 const commands: { [key: string]: (lang: string, subc: string[]) => void } = {
   about: about,

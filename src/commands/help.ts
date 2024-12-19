@@ -1,4 +1,5 @@
-import { blue, mes } from "../deps.ts";
+import { mes } from "../lang.ts";
+import { blue } from "@std/fmt/colors";
 
 function help(lang: string, subc: string[]) {
   if (subc[1] === undefined) {

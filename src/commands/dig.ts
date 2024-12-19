@@ -1,4 +1,4 @@
-import { blue, mes } from "../deps.ts";
+import { mes } from "../lang.ts";
 
 async function dig(lang: string, subc: string[]) {
   const domainName = subc[1];

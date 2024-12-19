@@ -1,0 +1,40 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@evex/denokv@^1.0.1": "1.0.1",
+    "jsr:@hono/hono@^4.6.14": "4.6.14",
+    "npm:@hono/valibot-validator@~0.5.1": "0.5.1_hono@4.6.12_valibot@1.0.0-beta.9",
+    "npm:valibot@^1.0.0-beta.9": "1.0.0-beta.9"
+  },
+  "jsr": {
+    "@evex/denokv@1.0.1": {
+      "integrity": "714b1f312d4ba653c5270a201488835d3d6834cb06280eac0c66995641858e74"
+    },
+    "@hono/hono@4.6.14": {
+      "integrity": "b39a5488266adf448fb1081bc3071a0d05145e72f3ab3ff83cf140e780c6c1de"
+    }
+  },
+  "npm": {
+    "@hono/valibot-validator@0.5.1_hono@4.6.12_valibot@1.0.0-beta.9": {
+      "integrity": "sha512-TXNFh1jofWNCX9sOX2gyw6qCXuAKr4yk//hOf9Lc8vcdIhQXTRQY6RPkKwL/14EldoIngkLj3iMHTXXhjgMCWg==",
+      "dependencies": [
+        "hono",
+        "valibot"
+      ]
+    },
+    "hono@4.6.12": {
+      "integrity": "sha512-eHtf4kSDNw6VVrdbd5IQi16r22m3s7mWPLd7xOMhg1a/Yyb1A0qpUFq8xYMX4FMuDe1nTKeMX5rTx7Nmw+a+Ag=="
+    },
+    "valibot@1.0.0-beta.9": {
+      "integrity": "sha512-yEX8gMAZ2R1yI2uwOO4NCtVnJQx36zn3vD0omzzj9FhcoblvPukENIiRZXKZwCnqSeV80bMm8wNiGhQ0S8fiww=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@evex/denokv@^1.0.1",
+      "jsr:@hono/hono@^4.6.14",
+      "npm:@hono/valibot-validator@~0.5.1",
+      "npm:valibot@^1.0.0-beta.9"
+    ]
+  }
+}

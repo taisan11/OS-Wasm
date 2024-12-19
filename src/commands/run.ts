@@ -1,22 +1,16 @@
-// deno-lint-ignore-file no-await-in-sync-fn
-import { init, WASI } from "https://deno.land/x/wasm@v1.2.2/wasi.ts";
 async function run() {
-  await init();
-
-  const wasi = new WASI({
-    env: {},
-    args: [],
-  });
-
-  const moduleBytes = fetch(
-    "https://cdn.deno.land/wasm/versions/v1.0.2/raw/tests/demo.wasm",
-  );
-  const module = await WebAssembly.compileStreaming(moduleBytes);
-  await wasi.instantiate(module, {});
-
-  const exitCode = wasi.start();
-  const stdout = wasi.getStdoutString();
-  // This should print "hello world (exit code: 0)"
-  console.log(`${stdout}(exit code: ${exitCode})`);
+  const wasmfile = new Uint8Array([
+    0, 97, 115, 109, 1, 0, 0, 0, 1, 133, 128, 128, 128, 0, 1, 96, 0, 1, 127,
+    3, 130, 128, 128, 128, 0, 1, 0, 4, 132, 128, 128, 128, 0, 1, 112, 0, 0,
+    5, 131, 128, 128, 128, 0, 1, 0, 1, 6, 129, 128, 128, 128, 0, 0, 7, 145,
+    128, 128, 128, 0, 2, 6, 109, 101, 109, 111, 114, 121, 2, 0, 4, 109, 97,
+    105, 110, 0, 0, 10, 138, 128, 128, 128, 0, 1, 132, 128, 128, 128, 0, 0,
+    65, 42, 11
+  ]);
+  // const wasmfile = await Deno.readFile(new URL("build/wasm/index.wasm", import.meta.url).href);
+  const wasmModule = new WebAssembly.Module(wasmfile);
+  const wasmInstance = new WebAssembly.Instance(wasmModule);
+  const main = wasmInstance.exports.main as CallableFunction;
+  console.log(main().toString());
 }
 export { run };

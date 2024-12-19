@@ -1,4 +1,4 @@
-import { blue } from "../deps.ts";
+import {blue} from "@std/fmt/colors"
 
 function about(lang: string) {
   console.log(
