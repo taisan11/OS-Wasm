@@ -12,6 +12,7 @@ const enUS: texts = {
     about: "View details of wasmOS",
     updata: "Update wasmOS",
     help: "View help",
+    run: "Run wasm file in apps dir",
   },
 };
 

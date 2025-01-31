@@ -9,9 +9,10 @@ const jaJP: texts = {
   },
   help: {
     pagenum: (page: number) => `${page}ページ目`,
-    about: "このBotについてのヘルプ",
-    updata: "アップデート情報のヘルプ",
-    help: "このBotのヘルプのヘルプ",
+    about: "wasmOSの詳細を表示!!",
+    updata: "アプデする(まだできてない)",
+    help: "helpを表示(このコマンド)",
+    run: "apps内のwasmファイルを実行",
   },
 };
 

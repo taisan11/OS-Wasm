@@ -21,5 +21,6 @@ export interface texts {
     about: string;
     updata: string;
     help: string;
+    run: string;
   };
 }
