@@ -8,10 +8,8 @@ export interface Setting {
 const settingPath = "./setting.json";
 if (!(await exists(settingPath))) {
   await ensureDir("./");
-  const syokiSetting: string = '{\n    "lang": "en"\n}';
-  const encoder = new TextEncoder();
-  const syokiSettingUint8Array = encoder.encode(syokiSetting);
-  await Deno.writeFile(settingPath, syokiSettingUint8Array);
+  const syokiSetting: string = `{"lang":"${navigator.language}"}`;
+  await Deno.writeTextFile(settingPath, syokiSetting);
 }
 
 export async function readSetting(): Promise<Setting> {
