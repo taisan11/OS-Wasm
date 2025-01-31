@@ -24,6 +24,6 @@ while (true) {
     console.log(mes.system.commandNotFound);
     continue;
   } else {
-    command(lang, subci, mes);
+    await command(lang, subci, mes);
   }
 }
