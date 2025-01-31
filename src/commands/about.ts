@@ -1,4 +1,4 @@
-import {blue} from "@std/fmt/colors"
+import { blue } from "@std/fmt/colors";
 
 function about(lang: string) {
   console.log(

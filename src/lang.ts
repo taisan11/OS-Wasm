@@ -1,4 +1,8 @@
 // messages.ts
+/**
+ * @module messages
+ * @deprecated
+ */
 // deno-lint-ignore no-explicit-any
 export const mes: { [key: string]: any } = {
   en: {

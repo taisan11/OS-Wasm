@@ -1,13 +1,11 @@
-import { mes } from "../lang.ts";
+import { type texts } from "../i18n.ts";
 
-async function dig(lang: string, subc: string[]) {
+export async function dig(lang: string, subc: string[], mes: texts) {
   const domainName = subc[1];
   if (!domainName) {
-    console.log(mes[lang].Nosubcentered);
+    console.log(mes.system.Nosubcentered);
     return;
   }
 
   console.log(await Deno.resolveDns(domainName, "A"));
 }
-
-export { dig };

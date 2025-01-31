@@ -1,7 +1,8 @@
 import { ensureDir, exists } from "@std/fs";
 
-interface Setting {
-  lang: string;
+export interface Setting {
+  lang?: string;
+  [key: string]: string | undefined;
 }
 
 const settingPath = "./setting.json";
@@ -17,6 +18,12 @@ export async function readSetting(): Promise<Setting> {
   const text = await Deno.readTextFile(settingPath);
   const Setting = JSON.parse(text);
   return Setting as Setting;
+}
+
+export async function editSetting(key:string,value:string): Promise<void> {
+  const setting = await readSetting();
+  setting[key] = value;
+  await Deno.writeTextFile(settingPath, JSON.stringify(setting));
 }
 
 // export async function writeSetting(setting: Setting): Promise<void> {
