@@ -1,4 +1,4 @@
-function clear(lang: string, subc: string[]) {
+function clear() {
   console.clear();
 }
 
