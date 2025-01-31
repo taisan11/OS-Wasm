@@ -4,7 +4,7 @@ export async function commandLoader(): Promise<
   Map<string, (lang: string, subc: string[],mes:texts) => unknown>
 > {
   const commands = new Map();
-  const commandFiles = Deno.readDirSync("./src/commands");
+  const commandFiles = Deno.readDirSync(import.meta.dirname+"/src/commands");
   for (const commandFile of commandFiles) {
     if (commandFile.isFile && commandFile.name.endsWith(".ts")) {
       const commandModule = await import(`./commands/${commandFile.name}`);
@@ -14,4 +14,9 @@ export async function commandLoader(): Promise<
     }
   }
   return commands;
+}
+
+export async function cmd(name:string): Promise<(lang: string, subc: string[],mes:texts) => unknown>{
+  const commandModule = await import(`./commands/${name}.ts`);
+  return commandModule[name];
 }
